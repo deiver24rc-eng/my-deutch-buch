@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PDF Reader</title>
+
+<style>
+body{
+text-align:center;
+font-family:Arial;
+background:#111;
+color:white;
+}
+
+img{
+max-width:95%;
+margin-top:20px;
+}
+
+button{
+font-size:20px;
+padding:10px 20px;
+margin:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>PDF Reader</h2>
+
+<img id="page" src="page-1.png">
+
+<br>
+
+<button onclick="prev()">Previous</button>
+<button onclick="next()">Next</button>
+
+<script>
+
+let page=1
+let max=164/ change to number of pages
+
+function show(){
+document.getElementById("page").src="page-"+page+".png"
+}
+
+function next(){
+if(page<max){
+page++
+show()
+}
+}
+
+function prev(){
+if(page>1){
+page--
+show()
+}
+}
+
+</script>
+
+</body>
+</html>
